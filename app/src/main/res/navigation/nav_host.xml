@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/fragmentTwo">
+
+
+    <fragment
+        android:id="@+id/fragmentfirst"
+        android:name="com.example.fragmentlifecycle2.Fragmentfirst"
+        android:label="fragment_fragmentfirst"
+        tools:layout="@layout/fragment_fragmentfirst" >
+        <action
+            android:id="@+id/action_fragmentfirst_to_fragmentsecond"
+            app:destination="@id/fragmentsecond" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentsecond"
+        android:name="com.example.fragmentlifecycle2.Fragmentsecond"
+        android:label="fragment_fragmentsecond"
+        tools:layout="@layout/fragment_fragmentsecond" />
+    <fragment
+        android:id="@+id/fragmentone"
+        android:name="com.example.fragmentlifecycle2.Fragmentone"
+        android:label="fragment_fragmentone"
+        tools:layout="@layout/fragment_fragmentone" >
+        <action
+            android:id="@+id/action_fragmentone_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.example.fragmentlifecycle2.FragmentTwo"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" />
+</navigation>
